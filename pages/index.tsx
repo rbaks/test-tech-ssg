@@ -19,7 +19,7 @@ const Home = ({
   </>
 )
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const categories = await getAllCategories()
   return { props: { categories } }
 }

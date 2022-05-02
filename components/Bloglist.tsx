@@ -10,12 +10,18 @@ const StyledBlogList = styled.div`
   gap: 3rem 3rem;
   padding: 3rem 0;
 `
+const StyledCategoryList = styled.a`
+  cursor: pointer;
+`
+
 const Bloglist = ({ category }: { category: Category }) => (
   <>
-    <Link href={category.slug} passHref>
-      <Text fontFamily="Gotham Medium" fontSize="24px">
-        Catégorie: {category.name}
-      </Text>
+    <Link href={`category/${category.slug}`} passHref>
+      <StyledCategoryList>
+        <Text fontFamily="Gotham Medium" fontSize="24px">
+          Catégorie: {category.name}
+        </Text>
+      </StyledCategoryList>
     </Link>
     <StyledBlogList>
       {category.blogs.map((blog) => (
