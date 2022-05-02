@@ -1,13 +1,16 @@
 import StyledHeader from './StyledHeader'
-import GothamBold24 from '../Typography/GothamBold24'
-import GothamMedium16 from '../Typography/GothamMedium16'
+import Text from '../Typography/Text'
 
 const Header = () => (
   <StyledHeader>
     <h1>
-      <GothamBold24>Le Blog</GothamBold24>
+      <Text color="white" fontFamily="Gotham Bold" fontSize="24px">
+        Le Blog
+      </Text>
     </h1>
-    <GothamMedium16>Voir les catégories</GothamMedium16>
+    <Text color="white" fontFamily="Gotham Medium" fontSize="16px">
+      Voir les catégories
+    </Text>
   </StyledHeader>
 )
 

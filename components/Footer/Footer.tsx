@@ -1,9 +1,11 @@
-import GothamMedium16 from '../Typography/GothamMedium16'
+import Text from '../Typography/Text'
 import StyledFooter from './StyledFooter'
 
 const Footer = () => (
   <StyledFooter>
-    <GothamMedium16>2022 Algar. Tous droits réservés.</GothamMedium16>
+    <Text fontFamily="Gotham Medium" fontSize="16px">
+      2022 Algar. Tous droits réservés.
+    </Text>
   </StyledFooter>
 )
 

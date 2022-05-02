@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import GlobalStyles from '../components/GlobalStyles'
 import Header from '../components/Header'
 
-const theme = {
+export const theme = {
   colors: {
     darkGreen: '#29B394',
     lightGreen: '#7DD8BE',
@@ -16,7 +16,7 @@ const theme = {
     darkWhite: '#F9F9F9',
     red: '#F2495E',
   },
-  padding: '80px',
+  padding: '200px',
 }
 
 function MyApp({ Component, pageProps }: AppProps) {

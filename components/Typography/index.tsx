@@ -1,2 +1,1 @@
-export * from './GothamBold24'
-export * from './GothamMedium16'
+export * from './Text'

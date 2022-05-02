@@ -1,10 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
+  min-width: 800px;
 }
 
 a {
@@ -29,8 +34,6 @@ a {
       /* url("assets/fonts/Gotham/Gotham-Book.woff2") format("woff2"), */
 }
 
-* {
-  box-sizing: border-box;
-}
+
 `
 export default GlobalStyles
