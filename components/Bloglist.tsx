@@ -9,11 +9,11 @@ const StyledBlogList = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 3rem 3rem;
   padding: 3rem 0;
-  margin-left: 50px;
+  margin-left: 70px;
 `
 const StyledCategoryList = styled.a`
   cursor: pointer;
-  margin-left: 50px;
+  margin-left: 70px;
 `
 
 const Bloglist = ({ category }: { category: Category }) => (
