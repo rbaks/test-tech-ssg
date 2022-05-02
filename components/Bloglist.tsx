@@ -9,9 +9,11 @@ const StyledBlogList = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 3rem 3rem;
   padding: 3rem 0;
+  margin-left: 50px;
 `
 const StyledCategoryList = styled.a`
   cursor: pointer;
+  margin-left: 50px;
 `
 
 const Bloglist = ({ category }: { category: Category }) => (
@@ -19,7 +21,7 @@ const Bloglist = ({ category }: { category: Category }) => (
     <Link href={`category/${category.slug}`} passHref>
       <StyledCategoryList>
         <Text fontFamily="Gotham Medium" fontSize="24px">
-          Catégorie: {category.name}
+          Catégorie : {category.name}
         </Text>
       </StyledCategoryList>
     </Link>
