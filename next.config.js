@@ -4,6 +4,9 @@ const nextConfig = {
   experimental: {
     styledComponents: true,
   },
+  images: {
+    domains: ['images.prismic.io'],
+  },
 }
 
 module.exports = nextConfig

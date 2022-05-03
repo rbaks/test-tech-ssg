@@ -1,7 +1,8 @@
 import type { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import Bloglist from '../components/Bloglist'
-import { getAllCategories } from '../data'
+import { getCategories } from '../lib/prismic'
+import { Category } from '../lib/types'
 
 const Home = ({
   categories,
@@ -14,13 +15,13 @@ const Home = ({
     </Head>
 
     {categories.map((category) => (
-      <Bloglist key={category.name} category={category} />
+      <Bloglist key={category.uid} category={category} />
     ))}
   </>
 )
 
 export const getStaticProps = async () => {
-  const categories = await getAllCategories()
+  const categories = (await getCategories()) as unknown as Category[]
   return { props: { categories } }
 }
 

@@ -39,6 +39,7 @@
     "import/extensions": [2, { ".tsx": "always" }],
     "no-restricted-exports": "off",
     "no-unused-vars": "warn",
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "camelcase": "off"
   }
 }

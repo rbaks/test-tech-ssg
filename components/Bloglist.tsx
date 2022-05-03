@@ -23,16 +23,16 @@ type Props = {
 
 const Bloglist = ({ category }: Props) => (
   <>
-    <Link href={`/category/${category.slug}`} passHref>
+    <Link href={`/category/${category.uid}`} passHref>
       <StyledCategoryList>
         <Text fontFamily="Gotham Medium" fontSize="24px">
-          Catégorie : {category.name}
+          Catégorie : {category.data.name}
         </Text>
       </StyledCategoryList>
     </Link>
     <StyledBlogList>
-      {category.blogs.map((blog) => (
-        <Card key={blog.slug} blog={blog} />
+      {category.data.blogs.map((blog) => (
+        <Card key={blog.blog.uid} blog={blog} />
       ))}
     </StyledBlogList>
   </>

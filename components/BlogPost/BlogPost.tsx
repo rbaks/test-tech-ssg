@@ -24,19 +24,19 @@ const BlogPost = ({ blog }: Props) => (
       fontFamily="Gotham Medium"
       fontSize="24px"
     >
-      {blog.title}
+      {blog.data.title[0].text}
     </Text>
     <Text
       fontFamily="Gotham Light Italic"
       fontSize="12px"
       style={{ marginBottom: '40px' }}
     >
-      Publié le {getFullDateStringInFrench(blog.publishedAt)}
+      Publié le {getFullDateStringInFrench(blog.first_publication_date)}
     </Text>
     <Image
       width="602.16px"
       height="317.81px"
-      src={`${blog.thumbnail}`}
+      src={`${blog.data.thumbnail.url}`}
       alt="thumbnail"
     />
     <Text
@@ -48,7 +48,7 @@ const BlogPost = ({ blog }: Props) => (
       }}
       fontFamily="Helvetica Regular"
       fontSize="20px"
-      dangerouslySetInnerHTML={{ __html: `${blog.content}` }}
+      dangerouslySetInnerHTML={{ __html: `${blog.data.content[0].text}` }}
     />
   </Wrapper>
 )
