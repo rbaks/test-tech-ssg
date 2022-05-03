@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
-import { Category } from '../data'
+import { Category } from '../lib/types'
 import Card from './Card/Card'
 import Text from './Typography/Text'
 
@@ -17,7 +17,11 @@ const StyledCategoryList = styled.a`
   color: ${({ theme }) => theme.colors.black};
 `
 
-const Bloglist = ({ category }: { category: Category }) => (
+type Props = {
+  category: Category
+}
+
+const Bloglist = ({ category }: Props) => (
   <>
     <Link href={`/category/${category.slug}`} passHref>
       <StyledCategoryList>

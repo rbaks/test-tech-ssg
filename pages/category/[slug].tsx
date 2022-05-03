@@ -1,7 +1,8 @@
 import type { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import Bloglist from '../../components/Bloglist'
-import { Category, getAllCategories } from '../../data'
+import { getAllCategories } from '../../data'
+import { Category } from '../../lib/types'
 
 const CategoryPage = ({
   category,
