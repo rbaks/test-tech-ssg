@@ -14,11 +14,12 @@ const StyledBlogList = styled.div`
 const StyledCategoryList = styled.a`
   cursor: pointer;
   margin-left: 70px;
+  color: ${({ theme }) => theme.colors.black};
 `
 
 const Bloglist = ({ category }: { category: Category }) => (
   <>
-    <Link href={`category/${category.slug}`} passHref>
+    <Link href={`/category/${category.slug}`} passHref>
       <StyledCategoryList>
         <Text fontFamily="Gotham Medium" fontSize="24px">
           Catégorie : {category.name}

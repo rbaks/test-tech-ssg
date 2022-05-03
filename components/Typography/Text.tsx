@@ -2,7 +2,12 @@ import styled from 'styled-components'
 
 type Props = {
   fontSize: string
-  fontFamily: 'Gotham Book' | 'Gotham Medium' | 'Gotham Bold'
+  fontFamily:
+    | 'Gotham Book'
+    | 'Gotham Medium'
+    | 'Gotham Bold'
+    | 'Gotham Light Italic'
+    | 'Helvetica Regular'
 }
 
 const Text = styled.span<Props>`
