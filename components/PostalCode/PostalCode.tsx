@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import Text from '../Typography/Text'
+import usePostalCode from './usePostalCode'
 
 const Card = styled.div`
   width: 720px;
@@ -51,14 +52,7 @@ const Button = styled.button`
 `
 
 const InputCard = () => {
-  const [postalCode, setPostalCode] = useState('')
-  const handleChange = (e: React.FormEvent<HTMLInputElement>) =>
-    setPostalCode(e.currentTarget.value)
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    alert(postalCode)
-  }
+  const { postalCode, handleChange, handleSubmit } = usePostalCode('')
 
   return (
     <Card>
