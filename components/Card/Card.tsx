@@ -21,15 +21,15 @@ const Card = ({ blog }: Props) => (
         height="190px"
       />
       <StyledDate>
-        <Text fontFamily="Gotham Medium" fontSize="20px">
+        <Text font="gothamMedium" size="bold" color="white">
           {new Date(blog.blog.first_publication_date).getUTCDate()}
         </Text>
-        <Text fontFamily="Gotham Book" fontSize="14px">
+        <Text font="gothamBook" size="small" color="white">
           {getMonthDateStringInFrench(blog.blog.first_publication_date)}
         </Text>
       </StyledDate>
       <StyledDescription>
-        <Text fontFamily="Gotham Medium" fontSize="16px">
+        <Text font="gothamMedium" size="medium">
           {blog.blog.data.title[0].text}
         </Text>
       </StyledDescription>
