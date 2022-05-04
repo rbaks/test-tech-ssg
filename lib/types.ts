@@ -95,3 +95,10 @@ export interface Blog {
     ]
   }
 }
+
+export interface APICartoResponse {
+  codePostal: string
+  codeCommune: string
+  nomCommune: string
+  libelleAcheminement: string
+}
