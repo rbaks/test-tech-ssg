@@ -3,7 +3,7 @@ import StyledFooter from './StyledFooter'
 
 const Footer = () => (
   <StyledFooter>
-    <Text fontFamily="Gotham Medium" fontSize="16px" color="white">
+    <Text font="gothamMedium" size="medium" color="white">
       2022 Algar. Tous droits réservés.
     </Text>
   </StyledFooter>

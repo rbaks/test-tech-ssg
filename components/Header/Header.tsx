@@ -9,8 +9,8 @@ const Header = () => (
         <Text
           style={{ cursor: 'pointer' }}
           color="white"
-          fontFamily="Gotham Bold"
-          fontSize="24px"
+          font="gothamBold"
+          size="large"
         >
           Le Blog
         </Text>
@@ -20,8 +20,8 @@ const Header = () => (
       <Text
         style={{ cursor: 'pointer' }}
         color="white"
-        fontFamily="Gotham Medium"
-        fontSize="16px"
+        font="gothamMedium"
+        size="medium"
       >
         Voir les catégories
       </Text>

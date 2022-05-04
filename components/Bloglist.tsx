@@ -14,7 +14,6 @@ const StyledBlogList = styled.div`
 const StyledCategoryList = styled.a`
   cursor: pointer;
   margin-left: 70px;
-  color: ${({ theme }) => theme.colors.black};
 `
 
 type Props = {
@@ -25,7 +24,7 @@ const Bloglist = ({ category }: Props) => (
   <>
     <Link href={`/category/${category.uid}`} passHref>
       <StyledCategoryList>
-        <Text fontFamily="Gotham Medium" fontSize="24px">
+        <Text font="gothamMedium" size="large">
           Catégorie : {category.data.name}
         </Text>
       </StyledCategoryList>

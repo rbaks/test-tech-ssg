@@ -19,18 +19,10 @@ const Wrapper = styled.div`
 
 const BlogPost = ({ blog }: Props) => (
   <Wrapper>
-    <Text
-      style={{ marginBottom: '20px' }}
-      fontFamily="Gotham Medium"
-      fontSize="24px"
-    >
+    <Text style={{ marginBottom: '20px' }} font="gothamMedium" size="large">
       {blog.data.title[0].text}
     </Text>
-    <Text
-      fontFamily="Gotham Light Italic"
-      fontSize="12px"
-      style={{ marginBottom: '40px' }}
-    >
+    <Text font="gothamLightItalic" size="tiny" style={{ marginBottom: '40px' }}>
       Publié le {getFullDateStringInFrench(blog.first_publication_date)}
     </Text>
     <Image
@@ -46,8 +38,8 @@ const BlogPost = ({ blog }: Props) => (
         fontWeight: 'lighter',
         lineHeight: '24px',
       }}
-      fontFamily="Helvetica Regular"
-      fontSize="20px"
+      font="helvetica"
+      size="bold"
       dangerouslySetInnerHTML={{ __html: `${blog.data.content[0].text}` }}
     />
   </Wrapper>

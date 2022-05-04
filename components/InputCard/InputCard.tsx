@@ -16,7 +16,7 @@ const Card = styled.div`
 
 const InputCard = () => (
   <Card>
-    <Text fontFamily="Gotham Medium" fontSize="24px" color="darkGreen">
+    <Text font="gothamMedium" size="large" color="darkGreen">
       Recevez les règles d&apos;urbanisme pour votre ville
     </Text>
   </Card>

@@ -16,6 +16,20 @@ export const theme = {
     darkWhite: '#F9F9F9',
     red: '#F2495E',
   },
+  sizes: {
+    large: '24px',
+    bold: '20px',
+    medium: '16px',
+    small: '14px',
+    tiny: '12px',
+  },
+  fonts: {
+    gothamBold: 'Gotham Bold',
+    gothamMedium: 'Gotham Medium',
+    gothamBook: 'Gotham Book',
+    gothamLightItalic: 'Gotham Light Italic',
+    helvetica: 'Helvetica Regular',
+  },
   padding: '200px',
 }
 
