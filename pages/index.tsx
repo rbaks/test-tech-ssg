@@ -1,6 +1,7 @@
 import type { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import Bloglist from '../components/Bloglist'
+import PostalCode from '../components/PostalCode'
 import { getCategories } from '../lib/prismic'
 import { Category } from '../lib/types'
 
@@ -17,6 +18,8 @@ const Home = ({
     {categories.map((category) => (
       <Bloglist key={category.uid} category={category} />
     ))}
+
+    <PostalCode />
   </>
 )
 
