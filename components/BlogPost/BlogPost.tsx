@@ -1,4 +1,7 @@
+// @ts-nocheck
+// PrismicRichText does not support typescript :(
 import Image from 'next/image'
+import { PrismicRichText } from '@prismicio/react'
 import { Blog } from '../../lib/types'
 import { getFullDateStringInFrench } from '../../lib/utils'
 import { Content, Date, Title, Wrapper } from './BlogPostElements'
@@ -21,11 +24,9 @@ const BlogPost = ({ blog }: Props) => (
       src={`${blog.data.thumbnail.url}`}
       alt="thumbnail"
     />
-    <Content
-      font="helvetica"
-      size="bold"
-      dangerouslySetInnerHTML={{ __html: `${blog.data.content[0].text}` }}
-    />
+    <Content font="helvetica" size="bold">
+      <PrismicRichText field={blog.data.content} />
+    </Content>
   </Wrapper>
 )
 
