@@ -1,21 +1,12 @@
 import Image from 'next/image'
-import styled from 'styled-components'
 import { Blog } from '../../lib/types'
 import { getFullDateStringInFrench } from '../../lib/utils'
 import Text from '../Typography/Text'
+import Wrapper from './BlogPostElements'
 
 type Props = {
   blog: Blog
 }
-
-const Wrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: ${({ theme }) => theme.colors.black};
-`
 
 const BlogPost = ({ blog }: Props) => (
   <Wrapper>

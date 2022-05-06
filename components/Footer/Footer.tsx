@@ -1,12 +1,12 @@
 import Text from '../Typography/Text'
-import StyledFooter from './StyledFooter'
+import Wrapper from './FooterElements'
 
 const Footer = () => (
-  <StyledFooter>
+  <Wrapper>
     <Text font="gothamMedium" size="medium" color="white">
       2022 Algar. Tous droits réservés.
     </Text>
-  </StyledFooter>
+  </Wrapper>
 )
 
 export default Footer

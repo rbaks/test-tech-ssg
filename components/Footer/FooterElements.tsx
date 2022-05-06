@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-const StyledHeader = styled.header`
-  height: 85px;
-  padding: 0 40px;
+const Wrapper = styled.footer`
+  height: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: ${({ theme }) => theme.colors.darkGreen};
+  color: ${({ theme }) => theme.colors.white};
 `
-export default StyledHeader
+export default Wrapper

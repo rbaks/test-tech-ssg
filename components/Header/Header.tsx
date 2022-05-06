@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import StyledHeader from './StyledHeader'
 import Text from '../Typography/Text'
+import Wrapper from './HeaderElements'
 
 const Header = () => (
-  <StyledHeader>
+  <Wrapper>
     <Link href="/" passHref>
       <h1>
         <Text
@@ -26,7 +26,7 @@ const Header = () => (
         Voir les catégories
       </Text>
     </Link>
-  </StyledHeader>
+  </Wrapper>
 )
 
 export default Header

@@ -1,6 +1,6 @@
 import type { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
-import BlogPost from '../../components/BlogPost/BlogPost'
+import BlogPost from '../../components/BlogPost'
 import { getByUID, getUIDs } from '../../lib/prismic'
 import { Blog } from '../../lib/types'
 
