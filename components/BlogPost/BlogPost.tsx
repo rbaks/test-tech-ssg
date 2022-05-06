@@ -15,7 +15,7 @@ const BlogPost = ({ blog }: Props) => (
     <Title font="gothamMedium" size="large">
       {blog.data.title[0].text}
     </Title>
-    <Date font="gothamLightItalic" size="tiny" style={{ marginBottom: '40px' }}>
+    <Date font="gothamLightItalic" size="tiny">
       Publié le {getFullDateStringInFrench(blog.first_publication_date)}
     </Date>
     <Image
