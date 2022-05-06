@@ -4,16 +4,20 @@ import { Category } from '../lib/types'
 import Card from './Card/Card'
 import Text from './Typography/Text'
 
+const Wrapper = styled.div`
+  max-width: 1208px;
+  margin: 0 auto;
+`
+
 const StyledBlogList = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 3rem 3rem;
   padding: 3rem 0;
-  margin-left: 70px;
 `
 const StyledCategoryList = styled.a`
   cursor: pointer;
-  margin-left: 70px;
+  max-width: 1208px;
 `
 
 type Props = {
@@ -21,7 +25,7 @@ type Props = {
 }
 
 const Bloglist = ({ category }: Props) => (
-  <>
+  <Wrapper>
     <Link href={`/category/${category.uid}`} passHref>
       <StyledCategoryList>
         <Text font="gothamMedium" size="large">
@@ -34,6 +38,6 @@ const Bloglist = ({ category }: Props) => (
         <Card key={blog.blog.uid} blog={blog} />
       ))}
     </StyledBlogList>
-  </>
+  </Wrapper>
 )
 export default Bloglist
