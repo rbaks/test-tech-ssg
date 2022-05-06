@@ -18,6 +18,7 @@ export const Date = styled(Text)`
   margin-bottom: 40px;
 `
 export const Content = styled(Text)`
+  max-width: 1214px;
   margin-top: 80px;
   margin-bottom: 196px;
   font-weight: lighter;
