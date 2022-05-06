@@ -1,7 +1,7 @@
 import * as prismic from '@prismicio/client'
 
 const getClient = () => {
-  const repoName = 'test-tesch-ssg'
+  const repoName = process.env.PRISMIC_REPOSITORY_NAME || ''
   const endpoint = prismic.getEndpoint(repoName)
   return prismic.createClient(endpoint)
 }
