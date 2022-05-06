@@ -1,30 +1,17 @@
 import Link from 'next/link'
-import Text from '../Typography/Text'
-import Wrapper from './HeaderElements'
+import { CursorText, Wrapper } from './HeaderElements'
 
 const Header = () => (
   <Wrapper>
     <Link href="/" passHref>
-      <h1>
-        <Text
-          style={{ cursor: 'pointer' }}
-          color="white"
-          font="gothamBold"
-          size="large"
-        >
-          Le Blog
-        </Text>
-      </h1>
+      <CursorText color="white" font="gothamBold" size="large">
+        Le Blog
+      </CursorText>
     </Link>
     <Link href="/" passHref>
-      <Text
-        style={{ cursor: 'pointer' }}
-        color="white"
-        font="gothamMedium"
-        size="medium"
-      >
+      <CursorText color="white" font="gothamMedium" size="medium">
         Voir les catégories
-      </Text>
+      </CursorText>
     </Link>
   </Wrapper>
 )

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import Text from '../Typography/Text'
 
-const Wrapper = styled.header`
+export const Wrapper = styled.header`
   height: 85px;
   padding: 0 40px;
   display: flex;
@@ -8,4 +9,7 @@ const Wrapper = styled.header`
   justify-content: space-between;
   background-color: ${({ theme }) => theme.colors.darkGreen};
 `
-export default Wrapper
+
+export const CursorText = styled(Text)`
+  cursor: pointer;
+`
