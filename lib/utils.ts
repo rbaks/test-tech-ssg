@@ -1,4 +1,4 @@
-import { Blog, NestedBlog } from './types'
+import { NestedBlog } from './types'
 
 export const getFullDateStringInFrench = (date: string) =>
   new Date(date).toLocaleDateString('fr-FR', {
