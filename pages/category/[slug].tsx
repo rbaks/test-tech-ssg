@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Bloglist from '../../components/Bloglist/Bloglist'
 import { getByUID, getUIDs } from '../../lib/prismic'
 import { Category } from '../../lib/types'
+import { sortMostRecent } from '../../lib/utils'
 
 const CategoryPage = ({
   category,
@@ -32,9 +33,13 @@ type Props = {
 }
 
 export const getStaticProps = async ({ params }: Props) => {
-  const category = (await getByUID('category', params.slug, {
+  const cat = (await getByUID('category', params.slug, {
     fetchLinks: 'article.thumbnail,article.title',
   })) as unknown as Category
+
+  const { blogs } = cat.data
+  blogs.sort(sortMostRecent)
+  const category = { ...cat, blogs }
   return { props: { category } }
 }
 

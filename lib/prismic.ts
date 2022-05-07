@@ -1,4 +1,5 @@
 import * as prismic from '@prismicio/client'
+import { sortMostRecent } from './utils'
 
 const getClient = () => {
   const repoName = process.env.PRISMIC_REPOSITORY_NAME || ''
@@ -35,5 +36,13 @@ export const getCategories = async () => {
     },
     fetchLinks: 'article.thumbnail,article.title',
   })
+
+  categories.map((category) => {
+    const { blogs } = category.data
+    blogs.sort(sortMostRecent)
+    blogs.length = 3
+    return { ...category, blogs }
+  })
+
   return categories
 }
